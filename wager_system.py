@@ -13,7 +13,7 @@ def wager(thresh, base, rate, pred, proj):
     if pred<=proj:
         thresh2 = -1*thresh
         
-    if abs(pred-proj)<=2:
+    if abs(pred-proj)<=thresh:
         return value
     else:
         value = base + rate*abs(pred-proj-thresh2)
